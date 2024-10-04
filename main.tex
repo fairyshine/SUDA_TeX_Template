@@ -1,0 +1,94 @@
+% !TEX program=xelatex
+% !Mode:: "TeX:UTF-8"
+\documentclass[master,openany,twoside,a4paper,AutoFakeBold]{sudathesis}
+\usepackage{pdfpages}
+
+% == 按需要导入你需要的package ==
+\usepackage{graphicx}
+\usepackage{float}          % 图表强制位置H
+\usepackage{multirow}   % 表格合并单元格
+\usepackage{booktabs}  % 表格用于创建漂亮的水平线
+\usepackage{stfloats}     % 跨栏图片*/表格*美化
+%\usepackage{svg}           % 支持插入矢量图
+\usepackage{pifont}        % 勾叉符号
+\usepackage{CJKutf8}    % 支持Unicode字符 ├ └ ─
+\usepackage[skins]{tcolorbox}  % 文本框
+\tcbuselibrary{breakable}% 支持文本框跨页
+\usepackage{boites, boites_exemples}
+\usepackage{amsmath}
+% == ===================== ==
+
+\begin{document}
+%\maketitle
+
+% 论文相关信息
+\include{content/0_0_info}
+
+% 【PDF】
+% 送审版
+\includepdf[pages=-]{pdf/DEMO_送审封面.pdf}
+
+% 最终版
+%\includepdf[pages=-]{pdf/DEMO_最终论文封面.pdf}
+%\includepdf[pages=-]{pdf/blank.pdf}
+%\includepdf[pages=-]{pdf/DEMO_独创声明.pdf}
+%\includepdf[pages=-]{pdf/blank.pdf}
+
+% 【摘要】
+% 正文前页码是大写罗马字母
+\pagenumbering{Roman}
+% 前言页眉页脚样式 % 摘要
+\pagestyle{cnfrontmatter}
+\include{content/0_1_abstract-zh}
+
+\pagestyle{enfrontmatter}
+\include{content/0_2_abstract-en}
+
+% 【目录】不设置页眉和页码
+\makeatletter
+\let \asas \ps@plain
+\let \ps@plain \ps@empty
+\makeatother
+\pagestyle{empty}
+
+% 生成目录
+\tableofcontents
+\setcounter{secnumdepth}{4}
+
+\makeatletter
+\let \ps@plain \asas
+\let\asas\relax
+\makeatother
+\clearpage  %目录3页以上，使用cleardoublepage
+
+% 正文页码样式
+\mainmatter
+% 正文页眉页脚样式
+\pagestyle{mainmatter}
+% 正文页码是阿拉伯数字
+\pagenumbering{arabic}
+
+% 【 正文】
+
+\include{content/1_introduction}
+\include{content/2_chapter}
+\include{content/3_chapter}
+\include{content/4_chapter}
+\include{content/5_conclusion}
+
+% % 参考文献,4或者小4楷体
+\include{content/reference}
+
+% % 附录,4或者小4楷体
+% \appendix
+
+% 附页标题样式
+\backmatter
+% 附页
+\include{content/achievement}
+\include{content/thanks}
+
+\includepdf[pages=-]{pdf/blank.pdf}
+\includepdf[pages=-]{pdf/DEMO_答辩决议书.pdf}
+
+\end{document}

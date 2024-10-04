@@ -1,0 +1,126 @@
+\chapter{绪论}
+
+\section{研究背景}
+
+对数度量之所以更为便利，其原因有多种：
+
+1. 它在实践中更为有用。一些在工程上非常重要的参数，比如时间、带宽、延迟数，等等，往往与可能性的数量的对数值呈线性关系。例如，增加一个继电器会使继电器的可能状态数加倍。如果对这一数目求以 2 为底的对数，则增加一个继电器后，会使结果加 1。使时间加倍，会使可能消息数近似变为原来的平方，而其对数则是加倍，诸如此类。
+
+2. 它更接近于人类对正确度量的直观认知。这一点与第 1 个原因密切相关，因为人们在对实体进行直觉度量时，通常是与公共标准进行线性比较。比如，人们认为，两张打孔卡存储信息的容量应当是一张打孔卡的两倍，两个相同信道的信息传输能力应当是一个信道的两倍。
+
+3. 更适于数学运算。许多极限运算很容易用对数表示，如果采用可能性的数目表示，可能会需要进行冗繁、笨拙的重新表述。
+
+\section{研究目的与意义}
+\subsection{现有解决方法}
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \textbf{文档域类型} & \textbf{Java类型} & \textbf{宽度(字节)} \\
+    \midrule
+    BOOLEAN  & boolean &  1 \\
+    CHAR     & char    &  2 \\
+    BYTE     & byte    &  1 \\
+    SHORT    & short   &  2 \\
+    INT      & int     &  4 \\
+    LONG     & long    &  8 \\
+    STRING   & String  &  字符串长度 \\
+    DATE     & java.util.Date & 8 \\
+    BYTE\_ARRAY & byte$[]$ & 数组长度 \\
+    BIG\_INTEGER & java.math.BigInteger & 和具体值有关 \\
+    BIG\_DECIMAL & java.math.BigDecimal & 和具体值有关 \\
+    \bottomrule
+  \end{tabular}
+  \caption{测试表格}\label{table:test1}
+\end{table}
+
+
+\subsection{现有问题与不足}
+
+测试一下脚注\footnote{测试脚注}，测试一下脚注\footnote{测试脚注}，测试一下脚
+注\footnote{测试脚注}，测试一下脚注\footnote{测试脚注}，测试一下脚注\footnote{测
+  试脚注}，测试一下脚注\footnote{测试脚注}，测试一下脚注\footnote{测试脚注}，测
+试一下脚注\footnote{测试脚注}，测试一下脚注\footnote{测试脚注}，测试一下脚
+注\footnote{测试脚注}。
+
+测试一下引用\cite{ACE05}。
+
+下面是一个项目列表：
+
+\begin{itemize}
+\item 这是第一项。这是第一项。
+\item 这是第二项。这是第二项。
+\item 这是第三项。这是第三项。这是第三项。
+  \begin{itemize}
+  \item 测试第二层列表。测试第二层列表。
+  \item 测试第二层列表。测试第二层列表。
+  \begin{itemize}
+     \item 测试第三层列表。测试第三层列表。
+     \item 测试第三层列表。测试第三层列表。
+  \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+下面是一个编号列表：
+
+\begin{enumerate}
+\item 这是第一项。这是第一项。这是第一项。这是第一项。这是第一项。这是第一项。这
+  是第一项。这是第一项。这是第一项。这是第一项。这是第一项。
+\item 这是第二项。这是第二项。
+\item 这是第三项。这是第三项。这是第三项。
+  \begin{itemize}
+  \item 测试第二层列表。测试第二层列表。
+  \item 测试第二层列表。测试第二层列表。
+  \item 测试第二层列表。测试第二层列表。测试第二层列表。测试第二层列表。测试第二
+    层列表。
+  \end{itemize}
+\item 这是第四项。这是第四项。这是第四项。
+  \item 测试第三层列表。测试第三层列表。测试第三层列表。测试第三层列表。测试第三
+    层列表。测试第三层列表。
+  \item 测试第三层列表。测试第三层列表。
+  \item 测试第三层列表。测试第三层列表。测试第三层列表。
+\end{enumerate}
+
+\begin{quote}
+这是一段引用。这是一段引用。这是一段引用。这是一段引用。这是一段引用。这是一段引用。
+这是一段引用。这是一段引用。这是一段引用。这是一段引用。这是一段引用。这是一段引用。
+\end{quote}
+
+
+
+
+\subsection{中心观点与思想}
+
+测试一下定理环境。
+
+\begin{algorithm}
+测试一下定理环境。测试一下定理环境。测试一下定理环境。测试一下定理环境。测试一下
+定理环境。测试一下定理环境。测试一下定理环境。
+\end{algorithm}
+
+
+\subsection{需要解决的问题与挑战}
+
+测试一下数学公式中的字体大小。
+
+\newcommand{\set}[1]{\left\{\,#1\,\right\}}
+\newcommand{\card}[1]{\left|\,#1\,\right|}
+
+Fall-Out指标计算公式如下：
+\begin{equation*}
+  \mbox{fallout} = \frac{\card{\set{\text{不相关文档}}\cap\set{\text{获取的文档}}}}{\card{\set{\text{不相关文档}}}}
+\end{equation*}
+
+
+
+\section{研究的应用背景}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width= 0.5\textwidth]{img/SchoolMark.jpg}\\
+  \caption{测试插图}\label{fig:test1}
+\end{figure}
+
+
+阿卜·日·法拉兹曾经说过，学问是异常珍贵的东西，从任何源泉吸收都不可耻。带着这句话，我们还要更加慎重的审视这个问题\ref{fig:test1}：它发生了会如何，不发生又会如何。
