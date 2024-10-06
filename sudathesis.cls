@@ -46,32 +46,32 @@ The LaTeX template for thesis of suda]
 
 % 主要字体为Times New Roman和宋体
 % 模板某些标题需要华文行楷和32号字
+
 % \setmainfont{Times New Roman}
 % * 主要英文字体：使用本地的【times】字体文件
 \setmainfont[Path=fonts/,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,
 BoldItalicFont=timesbi.ttf,
 ]{times.ttf}
 
+
 % \setCJKmainfont{SimSun}
 % * 主要中文字体：使用本地的【宋体】字体文件
 \setCJKmainfont[Path=fonts/]{simsun.ttc}
 
-% 斜楷体
-% \setCJKfamilyfont{hwxingkai}{STXingkai}
+
 % * 使用本地的字体文件，需要时添加
-%\setCJKfamilyfont{hwxingkai}[Path=fonts/]{stxingka.ttf}
-%\newcommand{\hwxingkai}{\CJKfamily{hwxingkai}}
- % windows 楷体
-%\setCJKfamilyfont{kai}{KaiTi_GB2312}
-% \setCJKfamilyfont{kai}{KaiTi}
+
+% * 使用本地的【黑体】字体文件
+\setCJKfamilyfont{hei}[Path=fonts/]{simhei.ttf}
+\newcommand{\hei}{\CJKfamily{hei}}
+
 % * 使用本地的【楷体】字体文件
 \setCJKfamilyfont{kai}[Path=fonts/]{simkai.ttf}
 \newcommand{\kai}{\CJKfamily{kai}}  
-% windows 宋体
-% \setCJKfamilyfont{song}{SimSun}
+
 % * 使用本地的【宋体】字体文件
 \setCJKfamilyfont{song}[Path=fonts/]{simsun.ttc}
-\newcommand\song{\CJKfamily{song}} 
+\newcommand{\song}{\CJKfamily{song}} 
 
 \newcommand{\xiaochuhao}{\fontsize{32pt}{\baselineskip}\selectfont}
 \newcommand{\xiaoer}{\fontsize{18pt}{27pt}\selectfont}          % 小二, 1.5行距
@@ -194,7 +194,7 @@ BoldItalicFont=timesbi.ttf,
 % 格式
 \ctexset{
     chapter={  %居中，小二黑体，段前后0.5行
-        format={\centering\zihao{-2}\heiti},
+        format={\centering\zihao{-2}\hei},
         nameformat={},
         aftername={\quad},
         titleformat={},
@@ -202,7 +202,7 @@ BoldItalicFont=timesbi.ttf,
         afterskip={0.5\baselineskip},
     },
     section={ %左对齐，4号黑体，前后0.5行
-        format={\raggedright\zihao{4}\heiti},
+        format={\raggedright\zihao{4}\hei},
         aftername={\quad},
         beforeskip={0.5\baselineskip},
         afterskip={0.5\baselineskip},
@@ -214,7 +214,7 @@ BoldItalicFont=timesbi.ttf,
         afterskip={0.5\baselineskip},
     },
 	subsubsection={ %左对齐，小4，黑体，前后0.3行
-		format={\raggedright\zihao{-4}\heiti},
+		format={\raggedright\zihao{-4}\hei},
 		name={,.},
 		aftername={\,\,},
 		indent={2em},
@@ -229,7 +229,7 @@ BoldItalicFont=timesbi.ttf,
 
 \RequirePackage{titletoc}
 % \titlecontents{标题名}[左间距]{标题格式}{标题标志}{无序号标题}{指引线与页码}[下间距
-\titlecontents{chapter}[0pt]{\vspace{-0.25\baselineskip}\heiti\zihao{-4}}{\thecontentslabel\ }{}
+\titlecontents{chapter}[0pt]{\vspace{-0.25\baselineskip}\hei\zihao{-4}}{\thecontentslabel\ }{}
     {\hspace{.5em}\titlerule*[4pt]{$\cdot$}{\zihao{-4}\contentspage}}[\vspace{0.02\baselineskip}]
 \titlecontents{section}[2em]{\vspace{-0.25\baselineskip}\songti\zihao{-4}}{\thecontentslabel\enspace}{}
     {\hspace{.5em}\titlerule*[4pt]{$\cdot$}{\zihao{-4}\contentspage}}[\vspace{0.01\baselineskip}]
@@ -435,8 +435,8 @@ BoldItalicFont=timesbi.ttf,
 % 图表标题的设置
 
 \RequirePackage{caption}
-\DeclareCaptionFormat{masterfigure}{\heiti\zihao{5}{#1\textrm{#2}#3}}
-\DeclareCaptionFormat{mastertable}{\heiti\zihao{5}{#1\textrm{#2}#3}}
+\DeclareCaptionFormat{masterfigure}{\hei\zihao{5}{#1\textrm{#2}#3}}
+\DeclareCaptionFormat{mastertable}{\hei\zihao{5}{#1\textrm{#2}#3}}
 \DeclareCaptionFormat{masterlstlisting}{\bf\songti\zihao{5}{#1\textrm{#2}#3}}
 
 \captionsetup[figure]{format=masterfigure,labelsep=quad}
@@ -518,7 +518,7 @@ BoldItalicFont=timesbi.ttf,
     \begin{titlepage}
         \hfill %居右
         \raisebox{-.2cm}[0pt][0pt]{
-            \zihao{5}\heiti
+            \zihao{5}\hei
             \begin{tabular}{l}
                 学校代码：\bf\suda@unicode\\[.1ex]
                 学\qquad 号：\bf\suda@studentID\\[.1ex]
@@ -536,7 +536,7 @@ BoldItalicFont=timesbi.ttf,
             \vskip 20bp
             
             \begin{tabular}{p{0.5cm}p{9.2cm}}
-                &\dlmu[9.2cm]{\zihao{4}\heiti{\suda@thesistitle}}\\ %[.4ex]%\hline
+                &\dlmu[9.2cm]{\zihao{4}\hei{\suda@thesistitle}}\\ %[.4ex]%\hline
                 &\dlmu[9.2cm]{} \\
                 % english title 需要手动输入
                 &\dlmu[9.2cm]{\zihao{4}{Modify Enlgish Title in Line 542 of sudathesis.cls}} \\%[.4ex]
@@ -544,7 +544,7 @@ BoldItalicFont=timesbi.ttf,
             \vskip 20bp
             ~~\\
             {
-                \zihao{4}\heiti
+                \zihao{4}\hei
                 \begin{tabular}{p{3cm}p{7cm}}
                     研~究~生~姓~名&\ulinecvcbc{\suda@thesisauthor}\\[.4ex]
                     指导教师姓名&\ulinecvcbc{\suda@teacher \quad \suda@subteacher}\\[.4ex]
@@ -615,7 +615,7 @@ BoldItalicFont=timesbi.ttf,
     \newpage
     \chapter*{\zihao{-2}{\suda@thesistitle}\\
     \vspace{2ex}
-    \centerline{\heiti\zihao{-2}{摘~~~~要}}}
+    \centerline{\hei\zihao{-2}{摘~~~~要}}}
     %\vspace{5ex}
     \setlength{\parindent}{24bp}
 }
@@ -635,7 +635,7 @@ BoldItalicFont=timesbi.ttf,
     \newpage
     \chapter*{\zihao{-2}{攻读学位期间的成果}\\
     \vspace{2ex}
-    \centerline{\heiti\zihao{-2}{}}}
+    \centerline{\hei\zihao{-2}{}}}
     %\vspace{5ex}
     \setlength{\parindent}{24bp}
 }
