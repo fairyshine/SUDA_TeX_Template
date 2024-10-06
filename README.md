@@ -4,7 +4,6 @@
 
 - ./content/文件夹内写论文主要内容
   - 0_0_info.tex 论文元信息
-- ./sudathesis.cls 第542行修改论文英文题目
 - ./sudathesis.cls 第627行修改论文英文摘要处的题目
 - ./reference.bib 参考文献
 - ./pdf/ 额外的pdf文件，在main.tex中导入
