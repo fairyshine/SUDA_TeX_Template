@@ -624,7 +624,7 @@ BoldItalicFont=timesbi.ttf,
 % 英文摘要
 \newenvironment{eabstract}{
     % \newpage1
-    \chapter*{\zihao{-2}{\textbf{Research on Representation Enhancement and Data Augmentation for Event Argument Extraction}} \\ 
+    \chapter*{\zihao{-2}{\textbf{Modify Enlgish Abstract Title in Line 627 of sudathesis.cls}} \\ 
     \vspace{2ex}
     \centerline{\zihao{-2}{\textbf{Abstract}}}}
     \setlength{\parindent}{24bp}
