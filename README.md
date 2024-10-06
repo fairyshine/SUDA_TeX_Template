@@ -29,7 +29,7 @@
 
 https://github.com/huhamhire/sudathesis
 
-https://github.com/tianhaoo/Soochow-University-Thesis-Overleaf-LaTeX-Template  (完善其行间距设置)
+https://github.com/tianhaoo/Soochow-University-Thesis-Overleaf-LaTeX-Template
 
 https://github.com/shadowofgost/sudathesis-soochow-university-latex-template
 
