@@ -1,7 +1,15 @@
 % !TEX program=xelatex
 % !Mode:: "TeX:UTF-8"
 \documentclass[master,openany,twoside,a4paper,AutoFakeBold]{sudathesis}
+
+% == 内置的package ==
+% 添加pdf文件 includepdf命令
 \usepackage{pdfpages}
+% 全局修改cite为右上角方括号 ；如果使用Overleaf可以注释掉下面2行，使用\upcite() (无自动补全)
+\usepackage{natbib}
+\setcitestyle{super, square, sort&compress}
+% == =========== ==
+
 
 % == 按需要导入你需要的package ==
 \usepackage{graphicx}
