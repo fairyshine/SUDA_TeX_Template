@@ -283,7 +283,7 @@ BoldItalicFont=timesbi.ttf,
 \RequirePackage[sort&compress]{natbib}
 \bibpunct{[}{]}{,}{n}{}{}
 \setlength{\bibsep}{0pt}
-\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
 %%%%%%%%%% table %%%%%%%%%%
 % 表格
