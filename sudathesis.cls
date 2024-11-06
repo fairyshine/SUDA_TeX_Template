@@ -251,12 +251,12 @@ BoldItalicFont=timesbi.ttf,
     {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}[\vspace{0.15\baselineskip}]
 
 %%%%%%%%%%%% algorithm %%%%%%%%%%%%
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\floatname{algorithm}{算法}
-
-% 提供 verbatiminput 命令和 comment 环境，按照源代码输出.
-\usepackage{supertabular}
+%\usepackage{algorithm}  %不好用，改用algorithm2e
+%\usepackage{algorithmic}
+%\floatname{algorithm}{算法}
+%
+%% 提供 verbatiminput 命令和 comment 环境，按照源代码输出.
+%\usepackage{supertabular}
 
 %%%%%%%%%% cross reference %%%%%%%%%%
 % 交叉引用
