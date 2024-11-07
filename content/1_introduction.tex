@@ -94,9 +94,33 @@
 
 测试一下定理环境。
 
-\begin{algorithm}
-测试一下定理环境。测试一下定理环境。测试一下定理环境。测试一下定理环境。测试一下
-定理环境。测试一下定理环境。测试一下定理环境。
+\begin{algorithm}[] \caption{一般的蒙特卡洛树搜索方法}\label{algo:raw_MCTS} %MCTS
+    
+    \SetKw{Func}{Function:}
+    \SetKw{Return}{Return:}
+    
+    \Func MCTS($s_0$, $N$)
+    
+    \KwIn{起始状态(original state) $s_0$, 搜索步长(search steps) $N$}
+    \KwOut{最佳叶子节点的状态(best leaf state) $s*$}
+    
+	 new root node $v_0$ of the tree\; 
+	 $v_0$.state $\leftarrow s_0$ \;
+	 
+	 \While{current search steps $< N$}{
+	   $v_l \leftarrow $ tree\_policy($v_0$)\;
+	   $\Delta \leftarrow $ default\_policy($v_l$.state)\;
+	   backup($v_l, \Delta$)\;
+	 }
+	 
+	 $v_{best} \leftarrow v_0$\;
+	 \While{not $v_{best}$.terminal()}{
+	 $v_{best} \leftarrow$ best\_child($v_{best}$)\;
+	 }
+	 
+	 $s* \leftarrow$ $v_{best}$.state\;
+	 
+	 \Return{$s*$}
 \end{algorithm}
 
 
