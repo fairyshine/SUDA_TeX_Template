@@ -271,9 +271,9 @@ BoldItalicFont=timesbi.ttf,
     bookmarksnumbered,
     bookmarksopen,
     pdftitle={SUDA thesis},
-    pdfauthor={YANGYAOSHENG},
+    pdfauthor={RadiCato},
     pdfsubject={苏州大学硕士学位论文},
-    pdfcreator={LaTeXed~By~YANGYAOSHENG}
+    pdfcreator={LaTeXed~By~RadiCato}
 }
 
 %%%%%%%%%% reference %%%%%%%%%%
