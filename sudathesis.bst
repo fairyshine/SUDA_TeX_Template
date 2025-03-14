@@ -197,8 +197,8 @@ FUNCTION {format.names}
 		'skip$
 	      if$
 	      t "others" =
-		{ " et~al." * }
-		{ " and " * t * }
+		{ " 等." * }
+		{ " , " * t * }
 	      if$
 	    }
 	  if$
@@ -590,12 +590,12 @@ FUNCTION {format.crossref.editor}
 { editor #1 "{vv~}{ll}" format.name$
   editor num.names$ duplicate$
   #2 >
-    { pop$ " et~al." * }
+    { pop$ " 等." * }
     { #2 <
 	'skip$
 	{ editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-	    { " et~al." * }
-	    { " and " * editor #2 "{vv~}{ll}" format.name$ * }
+	    { "等." * }
+	    { " , " * editor #2 "{vv~}{ll}" format.name$ * }
 	  if$
 	}
       if$
