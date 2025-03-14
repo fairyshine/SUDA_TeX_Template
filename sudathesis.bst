@@ -241,8 +241,8 @@ FUNCTION {format.inproceedings.booktitle}
 { booktitle empty$
     { "" }
     { editor empty$
-	{ booktitle " [C]. " * }
-	{ editor * ". " * booktitle " [C]. " *  }
+	{ booktitle " [C]" * }
+	{ editor * ". " * booktitle " [C]" *  }
       if$
     }
   if$
@@ -263,7 +263,7 @@ FUNCTION {format.inproceedings.title}
 { title empty$
     { "" }
     { booktitle empty$
-	{ title " [C]. " * }
+	{ title " [C]" * }
 	{ title " [A]. " * format.inproceedings.booktitle *  }
       if$
     }
