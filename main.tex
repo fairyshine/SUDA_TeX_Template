@@ -26,6 +26,8 @@
 \tcbuselibrary{breakable}% 支持文本框跨页
 \usepackage{boites, boites_exemples}
 \usepackage{amsmath}
+%\usepackage[defaultcolor={red}]{changes}           % 开启修订模式
+%\usepackage[final]{changes} % 关闭修订模式
 % == ===================== ==
 
 \begin{document}
@@ -96,7 +98,9 @@
 % 附页标题样式
 \backmatter
 % 附页
+\pagestyle{backmatter}
 \include{content/achievement}
+\pagestyle{thankmatter}
 \include{content/thanks}
 
 \includepdf[pages=-]{pdf/blank.pdf}
