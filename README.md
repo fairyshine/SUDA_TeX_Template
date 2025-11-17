@@ -12,6 +12,13 @@
 
 **使用xelatex编译!!**
 
+```shell
+xelatex main.tex
+bibtex main
+xelatex main.tex
+xelatex main.tex
+```
+
 ## 特性
 
 - Overleaf, TexPage和MacTex(TexLive的mac版本)均编译正常
